@@ -1,0 +1,44 @@
+# Nimiq TipJar - Pitch Deck
+
+## Slide 1: Problem
+- Online tipping is fragmented and expensive
+- Creators lose 3-5%% to payment processors
+- High network fees kill micro-payments under 
+- Users must copy-paste wallet addresses manually
+
+## Slide 2: Solution
+- Nimiq TipJar: instant micro-tipping inside Nimiq Pay
+- One-click wallet connection
+- Real-time balance display
+- Send tips with amount and recipient address
+- Transaction history tracking
+
+## Slide 3: Tech Stack
+- React 18 + TypeScript
+- Vite 5 (fast dev + production build)
+- Tailwind CSS (mobile-first design)
+- @nimiq/mini-app-sdk (native Nimiq integration)
+- Vercel (deployment)
+
+## Slide 4: Roadmap
+- QR code tipping
+- Multi-recipient split payments
+- Social sharing to X/Telegram
+- Leaderboard for top supporters
+- Fiat on-ramp integration
+
+## Slide 5: Team
+- Stitch: CSDN 3000+ follower blogger
+- AI x Web3 builder
+- Focus on making crypto payments accessible
+
+## Slide 6: Why Nimiq
+- Lowest transaction fees in the industry
+- Instant confirmations (~2s)
+- Built-in Mini App ecosystem
+- Growing creator economy on-chain
+
+## Slide 7: Call to Action
+- GitHub: github.com/Zhiyilang074811/nimiq-tipjar
+- Try it: [Vercel URL]
+- Built for Nimiq Mini Apps Competition 2026
