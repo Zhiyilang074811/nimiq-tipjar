@@ -1,31 +1,21 @@
 {
-  "name": "nimiq-tipjar",
-  "version": "0.0.1",
-  "description": "",
-  "main": "index.js",
+  "name": "nimiq-tip-jar",
+  "version": "1.0.0",
+  "description": "Nimiq Mini Apps Competition Entry - Tip Jar App",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "vite build",
     "preview": "vite preview"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "module",
   "dependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "@nimiq/mini-app-sdk": "^0.1.0"
+    "@nimiq/mini-app-sdk": "^0.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@types/react": "^18.3.12",
-    "@types/react-dom": "^18.3.1",
-    "@vitejs/plugin-react": "^4.3.4",
-    "typescript": "~5.7.2",
-    "vite": "^6.0.0",
-    "tailwindcss": "^4.0.0",
-    "autoprefixer": "^10.4.20",
-    "@tailwindcss/postcss": "^4.0.0"
-  },
-  "private": true
+    "vite": "^5.0.0",
+    "tailwindcss": "^3.4.0",
+    "postcss": "^8.4.0",
+    "autoprefixer": "^10.4.0"
+  }
 }

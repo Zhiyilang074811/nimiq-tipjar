@@ -1,6 +1,11 @@
+
 import { defineConfig } from 'vite';
 export default defineConfig({
   build: {
-    outDir: 'dist'
+    target: 'esnext',
+    minify: 'esbuild'
+  },
+  server: {
+    port: 3000
   }
 });
