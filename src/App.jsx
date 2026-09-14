@@ -3,7 +3,7 @@ import Header from './components/Header'
 import ConnectWallet from './components/ConnectWallet'
 import SendTip from './components/SendTip'
 import TransactionHistory from './components/TransactionHistory'
-import { initX402, getBalance } from './utils/x402'
+import { initNimiq, getBalance } from './utils/nimiq'
 
 export default function App() {
   const [connected, setConnected] = useState(false)
@@ -12,14 +12,14 @@ export default function App() {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
 
-  useEffect(() => { checkx402Provider() }, [])
+  useEffect(() => { checkNimiqProvider() }, [])
 
-  async function checkx402Provider() {
+  async function checkNimiqProvider() {
     try {
       setError(null)
-      const x402 = await initX402()
-      if (x402) {
-        const accounts = await x402.listAccounts()
+      const nimiq = await initNimiq()
+      if (nimiq) {
+        const accounts = await nimiq.listAccounts()
         if (accounts.length > 0) {
           const addr = accounts[0]
           setAccount(addr)
@@ -27,14 +27,14 @@ export default function App() {
           const bal = await getBalance(addr)
           setBalance(bal)
         } else {
-          setError('No x402 account found. Create one in x402 Wallet.')
+          setError('No Nimiq account found. Please create one in Nimiq Pay.')
         }
       } else {
-        setError('x402 Wallet not detected. Open this app inside x402 Wallet browser.')
+        setError('Nimiq Pay not detected. Open this app inside Nimiq Pay.')
       }
     } catch (err) {
       console.error('Connection error:', err)
-      setError(err.message || 'Failed to connect to x402')
+      setError(err.message || 'Failed to connect to Nimiq Pay')
     } finally {
       setLoading(false)
     }
@@ -43,7 +43,7 @@ export default function App() {
   if (loading) {
     return (
       <div style={{minHeight:'100vh',display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'center',background:'linear-gradient(180deg,#0f172a,#1e293b)'}}>
-        <div style={{fontSize:'3rem',marginBottom:'1rem'}}>⚡</div>
+        <div style={{fontSize:'3rem',marginBottom:'1rem'}}>🌱</div>
         <p style={{color:'#94a3b8'}}>Loading TipJar...</p>
       </div>
     )
@@ -58,16 +58,16 @@ export default function App() {
         </div>
       )}
       {!connected ? (
-        <ConnectWallet onConnect={() => checkx402Provider()} />
+        <ConnectWallet onConnect={() => checkNimiqProvider()} />
       ) : (
         <>
-          <SendTip onSend={() => checkx402Provider()} />
+          <SendTip onSend={() => checkNimiqProvider()} />
           <TransactionHistory account={account} />
         </>
       )}
       {!connected && !loading && (
         <div style={{padding:'1rem',textAlign:'center'}}>
-          <p style={{color:'#64748b',fontSize:'0.875rem'}}>Open inside x402 Wallet to connect your wallet</p>
+          <p style={{color:'#64748b',fontSize:'0.875rem'}}>Open inside Nimiq Pay to connect your wallet</p>
         </div>
       )}
     </div>
