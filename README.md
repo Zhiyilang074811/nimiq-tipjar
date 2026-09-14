@@ -59,9 +59,9 @@ The production output is generated in dist/.
 
 ## Demo
 
-- Live App: [Add your Vercel URL]
-- Demo Video: [Add your video URL]
-- GitHub: [Add your GitHub URL]
+- Live App: https://zhiyilang074811.github.io/nimiq-tipjar/
+- Demo Video: [YouTube Demo Video (coming soon)]
+- GitHub: https://github.com/Zhiyilang074811/nimiq-tipjar
 
 ## How It Works
 
@@ -88,3 +88,4 @@ Stitch - CSDN 3000+ follower blogger, AI x Web3 builder.
 ## License
 
 MIT
+
