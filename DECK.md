@@ -40,5 +40,6 @@
 
 ## Slide 7: Call to Action
 - GitHub: github.com/Zhiyilang074811/nimiq-tipjar
-- Try it: [Vercel URL]
+- Try it: https://zhiyilang074811.github.io/nimiq-tipjar/
 - Built for Nimiq Mini Apps Competition 2026
+
